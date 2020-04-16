@@ -7,10 +7,6 @@ import Avatar from "./components/Avatar/Avatar";
 
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.newTaskTitleRef = React.createRef();
-    }
 
     qualities = [
         {id:0, title: 'good-tempered', active: false},
@@ -46,7 +42,7 @@ class App extends React.Component {
                 <Message quality={this.qualities} />
                 <div className="click">
                    <span>{this.state.counter}</span>
-                   <input ref={this.newTaskTitleRef}  type="text"/>
+                   <input  type="text"/>
                    <button onClick={this.onAlert}> Click </button>
                 </div>
 
