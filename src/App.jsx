@@ -7,6 +7,10 @@ import Avatar from "./components/Avatar/Avatar";
 
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.newCountRef = React.createRef();
+    }
 
     qualities = [
         {id:0, title: 'good-tempered', active: false},
@@ -21,14 +25,15 @@ class App extends React.Component {
 
 
     onAlert = () => {
+        let newCount = this.newCountRef.current.value;
+
+        alert(`Hello, ${newCount}`);
+        this.newCountRef.current.value = ' ';
+
         this.setState((state) => ({
             counter: state.counter + 1
         }));
-
-        let myInput = document.querySelectorAll("input");
-        alert(`Hello, ${myInput[0].value}`);
-        myInput[0].value = ' ';
-
+        
     }
 
 
@@ -42,7 +47,7 @@ class App extends React.Component {
                 <Message quality={this.qualities} />
                 <div className="click">
                    <span>{this.state.counter}</span>
-                   <input  type="text"/>
+                   <input ref={this.newCountRef} type="text"/>
                    <button onClick={this.onAlert}> Click </button>
                 </div>
 
