@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from "./Button";
 import Text from "./Text";
-import classes from './ButtonArea.module.css'
+import classes from './Screen.module.css'
 
 
 
-class ButtonArea extends React.Component {
+class Screen extends React.Component {
 
 
 
@@ -21,7 +21,7 @@ class ButtonArea extends React.Component {
                         <Text counter={this.props.counter}/>
                     </div>
 
-                    <Button onAddName={this.props.onAddName}/>
+                    <Button error={this.props.error} value={this.props.value} onAddName={this.props.onAddName}/>
                 </div>
 
 
@@ -30,4 +30,4 @@ class ButtonArea extends React.Component {
     }
 }
 
-export default ButtonArea;
+export default Screen;

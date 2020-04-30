@@ -8,13 +8,13 @@ class Names extends React.Component {
 
 
     render() {
-        let namesNew = this.props.names.map(name => <Name name={name.name}/>)
+        let namesNew = this.props.names.map(name => <Name key={name.id} name={name.name}/>)
 
 
         return (
             <div className={classes.names}>
                 <div className={classes.item}>
-                    <span>{namesNew}</span>
+                    <div>{namesNew}</div>
                 </div>
 
 

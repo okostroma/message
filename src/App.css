@@ -1,7 +1,15 @@
+body {
+    background-color: aliceblue;
+
+}
+
 .App {
     font-family: cursive;
     margin: 0;
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+
 
 }
 
@@ -60,6 +68,10 @@
     margin: 2px 2px 2px 350px;
     opacity: .6;
 
+}
+
+.error {
+    border-color: red;
 }
 
 
